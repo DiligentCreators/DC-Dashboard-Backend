@@ -2,23 +2,20 @@
 
 namespace App\Models;
 
+use App\Observers\RoleObserver;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role as ModelsRole;
 
+#[ObservedBy(RoleObserver::class)]
 class Role extends ModelsRole
 {
     // Use SoftDeletes trait to enable soft deleting of models
     use HasFactory, SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         // The name of the role. This is the name that is used to identify the
         // role in the system.

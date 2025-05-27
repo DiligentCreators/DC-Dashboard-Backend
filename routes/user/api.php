@@ -9,3 +9,4 @@ Route::get('dashboard', DashboardController::class)->name('dashboard');
 
 Route::get('profile', [ProfileController::class, 'view'])->name('profile');
 Route::post('profile', [ProfileController::class, 'store'])->name('profile');
+Route::put('profile', [ProfileController::class, 'update'])->name('profile');

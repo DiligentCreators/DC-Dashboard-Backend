@@ -16,14 +16,14 @@ class UsernameRule implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         // username is required
-        if(empty($value)){
+        if (empty($value)) {
             $fail("The {$attribute} is required.");
 
             return;
         }
 
         // Username must be between 3 and 65 characters
-        if(strlen($value) < 3 || strlen($value) > 65){
+        if (strlen($value) < 3 || strlen($value) > 65) {
             $fail("The {$attribute} must be between 3 and 65 characters.");
 
             return;
@@ -31,7 +31,7 @@ class UsernameRule implements ValidationRule
 
         // Username is unique
         $user = User::where('username', $value)->first();
-        if($user){
+        if ($user) {
             $fail("The {$value} is already registered.");
 
             return;

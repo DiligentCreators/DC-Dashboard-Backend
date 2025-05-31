@@ -30,7 +30,7 @@ class ForgotPasswordController extends Controller
         );
 
         // Todo: Send email with the token
-        logger('Email Sent with Token: ' . $token);
+        logger('Email Sent with Token: '.$token);
 
         return ResponseService::success($token, 'Password reset token sent to your email.');
     }

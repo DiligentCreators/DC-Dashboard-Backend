@@ -16,6 +16,7 @@ class RegisterController extends Controller
      */
     public function __invoke(RegisterRequest $request)
     {
+
         try {
             $validated = $request->validated();
 
@@ -25,9 +26,9 @@ class RegisterController extends Controller
 
             return ResponseService::success($user, 'User registered successfully', 201);
         } catch (QueryException $e) {
-            return ResponseService::error('Database error: ' . $e->getMessage(), 500);
+            return ResponseService::error('Database error: '.$e->getMessage(), 500);
         } catch (Exception $e) {
-            return ResponseService::error('Registration failed: ' . $e->getMessage(), 500);
+            return ResponseService::error('Registration failed: '.$e->getMessage(), 500);
         }
     }
 }

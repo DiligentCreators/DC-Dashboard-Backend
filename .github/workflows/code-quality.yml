@@ -50,7 +50,7 @@ jobs:
       - name: Auto Commit Fixes
         if: env.FILES != ''
         id: auto_commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "Apply automated code quality fixes"
           commit_user_name: "GitHub Action"
@@ -63,7 +63,7 @@ jobs:
 
       - name: Commit .git-blame-ignore-revs Update
         if: env.FILES != ''
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "Update .git-blame-ignore-revs with formatting commit"
           commit_user_name: "GitHub Action"

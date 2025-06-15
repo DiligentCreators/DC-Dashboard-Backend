@@ -22,7 +22,7 @@ class UserObserver
         $user->username = 'user'.$user->id;
         $user->saveQuietly();
 
-        // Todo: Send Welcome Email
+        // Todo: Send Verification Email
 
     }
 
@@ -31,7 +31,10 @@ class UserObserver
      */
     public function updated(User $user): void
     {
-        //
+        if($user->isDirty('email_verified_at')) {
+            // Todo: Send Welcome Email
+            logger('Welcome Email Sent');
+        }
     }
 
     /**
@@ -39,7 +42,7 @@ class UserObserver
      */
     public function deleted(User $user): void
     {
-        //
+        // Todo: Delete all related data
     }
 
     /**
@@ -55,7 +58,7 @@ class UserObserver
      */
     public function forceDeleted(User $user): void
     {
-        //
+        // Todo: Delete all related data
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\CodeVerificationController;
 use App\Http\Controllers\Api\Auth\ForgotPasswordController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\LogoutController;
@@ -15,8 +16,14 @@ Route::post('forgot-password', ForgotPasswordController::class)->name('forgot-pa
 
 Route::post('reset-password', ResetPasswordController::class)->name('reset-password');
 
-Route::get('verify', function () {
-    return 'verification';
-})->name('verification');
+Route::middleware('auth:sanctum')->group(function () {
 
-Route::post('logout', LogoutController::class)->name('logout')->middleware('auth:sanctum');
+    // Verification
+    Route::get('/verification', [CodeVerificationController::class, 'verification']);
+    Route::post('/verification', [CodeVerificationController::class, 'store'])->name('verification');
+    Route::get('/verification/{email}/{code}', [CodeVerificationController::class, 'verificationCode'])->name('verification.code');
+    // Send Verification Code
+    Route::post('/resend-verification', [CodeVerificationController::class, 'resendVerificationCode'])->name('resend.verification');
+
+    Route::post('logout', LogoutController::class)->name('logout')->middleware('auth:sanctum');
+});

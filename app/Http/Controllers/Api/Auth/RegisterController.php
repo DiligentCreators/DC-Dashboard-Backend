@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Resources\Api\Auth\AuthUserResource;
 use App\Models\User;
 use App\Services\ResponseService;
 use Exception;
@@ -21,7 +22,9 @@ class RegisterController extends Controller
 
             $user = User::create($validated);
 
-            return ResponseService::success($user, 'User registered successfully', 201);
+            $resource = new AuthUserResource($user);
+
+            return ResponseService::success($resource, 'User registered successfully', 201);
         } catch (QueryException $e) {
             return ResponseService::error('Database error: '.$e->getMessage(), 500);
         } catch (Exception $e) {

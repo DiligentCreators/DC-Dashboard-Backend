@@ -70,39 +70,36 @@ class StaffUserController extends Controller
         );
     }
 
-    public function update(UpdateStaffUserRequest $request, string $id)
+  public function update(UpdateStaffUserRequest $request, string $id)
 {
-    return $request->all();
-    $this->authorizePermission('clients.update');
-
     $validated = $request->validated();
     $user = User::with('profile')->findOrFail($id);
 
-    // Handle avatar upload
-    if ($request->hasFile('profile.avatar_file')) {
-        $file = $request->file('profile.avatar_file');
-        $path = $file->store('avatars', 'public'); // stores in storage/app/public/avatars
-        $validated['profile']['avatar'] = $path;
+    if ($request->hasFile('profile')['avatar_file']) {
+        $path = $request->file('profile')['avatar_file']
+                        ->store('avatars', 'public');
+        $validated['profile']['avatar'] = basename($path);
     }
 
     $user->update($validated);
 
-    if (isset($validated['profile']) && is_array($validated['profile'])) {
+    if (!empty($validated['profile'])) {
         $user->profile()->updateOrCreate(
             ['user_id' => $user->id],
             $validated['profile']
         );
     }
 
-    if (isset($validated['roles'])) {
+    if (!empty($validated['roles'])) {
         $user->syncRoles($validated['roles']);
     }
 
     return ResponseService::success(
         new StaffUserResource($user->load(['roles', 'profile'])),
-        'Staff user updated successfully'
+        'Staff updated successfully'
     );
 }
+
 
 
     public function destroy(User $user)

@@ -13,7 +13,7 @@
         "husky": "^9.1.7",
         "laravel-vite-plugin": "^2.0.1",
         "lint-staged": "^16.2.7",
-        "prettier": "^3.7.1",
+        "prettier": "^3.7.3",
         "prettier-plugin-blade": "^2.1.21",
         "prettier-plugin-tailwindcss": "^0.7.2",
         "tailwindcss": "^4.1.17",

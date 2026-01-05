@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51169c3ca833fe51a71a8c987c5881a4",
+    "content-hash": "697703d2d62d2fa7b7e6bf60910e9c22",
     "packages": [
         {
             "name": "brick/math",
@@ -3542,16 +3542,16 @@
         },
         {
             "name": "shaz3e/email-builder",
-            "version": "v0.7.2",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Shaz3e/email-builder.git",
-                "reference": "015f329f81d4975a7fcc321f94ab6bc1628d6d71"
+                "reference": "f266fd40b9c4d570306734e8f661c14a86d832f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Shaz3e/email-builder/zipball/015f329f81d4975a7fcc321f94ab6bc1628d6d71",
-                "reference": "015f329f81d4975a7fcc321f94ab6bc1628d6d71",
+                "url": "https://api.github.com/repos/Shaz3e/email-builder/zipball/f266fd40b9c4d570306734e8f661c14a86d832f2",
+                "reference": "f266fd40b9c4d570306734e8f661c14a86d832f2",
                 "shasum": ""
             },
             "type": "library",
@@ -3580,9 +3580,9 @@
             "description": "Create Email from frontend and use palceholder within email",
             "support": {
                 "issues": "https://github.com/Shaz3e/email-builder/issues",
-                "source": "https://github.com/Shaz3e/email-builder/tree/v0.7.2"
+                "source": "https://github.com/Shaz3e/email-builder/tree/v1.0.1"
             },
-            "time": "2025-06-15T20:39:56+00:00"
+            "time": "2026-01-04T21:02:06+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",

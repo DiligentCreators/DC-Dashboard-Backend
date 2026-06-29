@@ -8773,16 +8773,16 @@
         },
         {
             "name": "tightenco/duster",
-            "version": "v3.4.2",
+            "version": "v3.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tighten/duster.git",
-                "reference": "11b55341bfeeb86b47a6a1b03d58f80632fd2606"
+                "reference": "1a19faaa1a54b52386501c11a4e9699e715aa504"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tighten/duster/zipball/11b55341bfeeb86b47a6a1b03d58f80632fd2606",
-                "reference": "11b55341bfeeb86b47a6a1b03d58f80632fd2606",
+                "url": "https://api.github.com/repos/tighten/duster/zipball/1a19faaa1a54b52386501c11a4e9699e715aa504",
+                "reference": "1a19faaa1a54b52386501c11a4e9699e715aa504",
                 "shasum": ""
             },
             "require": {
@@ -8838,7 +8838,7 @@
                 "issues": "https://github.com/tighten/duster/issues",
                 "source": "https://github.com/tighten/duster"
             },
-            "time": "2026-04-20T22:45:06+00:00"
+            "time": "2026-06-28T22:18:47+00:00"
         }
     ],
     "aliases": [],

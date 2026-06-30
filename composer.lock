@@ -3662,16 +3662,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "8.0.0",
+            "version": "8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "70a6ab04108616b438e0839598f473b513281644"
+                "reference": "754db00705dc98f9d79ace30dbb553837581571e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/70a6ab04108616b438e0839598f473b513281644",
-                "reference": "70a6ab04108616b438e0839598f473b513281644",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/754db00705dc98f9d79ace30dbb553837581571e",
+                "reference": "754db00705dc98f9d79ace30dbb553837581571e",
                 "shasum": ""
             },
             "require": {
@@ -3737,7 +3737,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-permission/issues",
-                "source": "https://github.com/spatie/laravel-permission/tree/8.0.0"
+                "source": "https://github.com/spatie/laravel-permission/tree/8.1.0"
             },
             "funding": [
                 {
@@ -3745,7 +3745,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-30T19:30:22+00:00"
+            "time": "2026-06-27T19:35:14+00:00"
         },
         {
             "name": "symfony/clock",
